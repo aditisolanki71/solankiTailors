@@ -1,5 +1,7 @@
 package com.solankiTailorsDB.solankiTailorsDB.Service;
 
-public class AdminService {
+import com.solankiTailorsDB.solankiTailorsDB.Model.AdminModel;
 
+public interface AdminService {
+	AdminModel addAdmin(AdminModel admin);
 }

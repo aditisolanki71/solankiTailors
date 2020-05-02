@@ -26,4 +26,10 @@ public class AdminServiceImplementation implements AdminService {
 		return adminrepository.findAll();
 	}
 
+	@Override
+	public AdminModel updateAdmin(AdminModel admin) {
+		// TODO Auto-generated method stub
+		return adminrepository.save(admin);
+	}
+
 }

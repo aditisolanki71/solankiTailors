@@ -1,5 +1,7 @@
 package com.solankiTailorsDB.solankiTailorsDB.ServiceImplementation;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,11 @@ public class CategoryServiceImplementation implements CategoryService{
 	public CategoryModel addCategory(CategoryModel category) {
 		// TODO Auto-generated method stub
 		return categoryrepository.save(category);
+	}
+	@Override
+	public List<CategoryModel> getAllCategory() {
+		// TODO Auto-generated method stub
+		return categoryrepository.findAll();
 	}
 
 }

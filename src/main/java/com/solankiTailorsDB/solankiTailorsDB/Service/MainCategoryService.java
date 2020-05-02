@@ -9,4 +9,5 @@ public interface MainCategoryService {
 	List<MainCategoryModel> getAllMainCategory();
 	MainCategoryModel updateMainCategory(MainCategoryModel mainCategory);
 	void deleteMainCategory(int id);
+	MainCategoryModel getMainCategoryById(int id);
 }

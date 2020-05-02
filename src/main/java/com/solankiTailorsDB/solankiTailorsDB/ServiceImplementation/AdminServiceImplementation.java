@@ -1,5 +1,7 @@
 package com.solankiTailorsDB.solankiTailorsDB.ServiceImplementation;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,12 @@ public class AdminServiceImplementation implements AdminService {
 	public AdminModel addAdmin(AdminModel admin) {
 		// TODO Auto-generated method stub
 		return adminrepository.save(admin);
+	}
+
+	@Override
+	public List<AdminModel> getAllAdmin() {
+		// TODO Auto-generated method stub
+		return adminrepository.findAll();
 	}
 
 }

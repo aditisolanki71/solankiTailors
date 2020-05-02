@@ -1,5 +1,7 @@
 package com.solankiTailorsDB.solankiTailorsDB.ServiceImplementation;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,12 @@ public class MainCategoryServiceImplementation implements MainCategoryService{
 	public MainCategoryModel addMainCategry(MainCategoryModel mainCategory) {
 		// TODO Auto-generated method stub
 		return maincategoryrepository.save(mainCategory);
+	}
+
+	@Override
+	public List<MainCategoryModel> getAllMainCategory() {
+		// TODO Auto-generated method stub
+		return maincategoryrepository.findAll();
 	}
 	
 

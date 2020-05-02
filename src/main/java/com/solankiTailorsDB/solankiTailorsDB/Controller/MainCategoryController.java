@@ -1,6 +1,9 @@
 package com.solankiTailorsDB.solankiTailorsDB.Controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,5 +22,10 @@ public class MainCategoryController {
 	@PostMapping
 	public MainCategoryModel addMainCategry(@RequestBody MainCategoryModel mainCategory) {
 		return maincategoryservice.addMainCategry(mainCategory);
+	}
+	
+	@GetMapping
+	public List<MainCategoryModel> getAllMainCategory() {
+		return maincategoryservice.getAllMainCategory();
 	}
 }

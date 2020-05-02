@@ -41,4 +41,10 @@ public class AdminController {
 	public void deleteAdmin(@PathVariable int id) {
 		adminservice.deleteAdmin(id);
 	}
+
+	@GetMapping("/{id}")
+	public AdminModel getAdminById(@PathVariable int id) {
+		return adminservice.getAdminById(id);
+	}
+	
 }

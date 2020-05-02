@@ -39,4 +39,11 @@ public class AdminServiceImplementation implements AdminService {
 		adminrepository.deleteById(id);
 	}
 
+	@Override
+	public AdminModel getAdminById(int id) {
+		// TODO Auto-generated method stub
+		 Optional<AdminModel> g=adminrepository.findById(id);
+		 return g.get();
+	}
+
 }

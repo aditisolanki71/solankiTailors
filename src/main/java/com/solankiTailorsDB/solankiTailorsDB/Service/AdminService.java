@@ -8,4 +8,5 @@ public interface AdminService {
 	AdminModel addAdmin(AdminModel admin);
 	List<AdminModel> getAllAdmin();
 	AdminModel updateAdmin(AdminModel admin);
+	void deleteAdmin(int id);
 }

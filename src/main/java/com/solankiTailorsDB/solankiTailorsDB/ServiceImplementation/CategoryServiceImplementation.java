@@ -40,4 +40,9 @@ public class CategoryServiceImplementation implements CategoryService{
 		Optional<CategoryModel> g = categoryrepository.findById(id);
 		return g.get();
 	}
+	@Override
+	public void deleteAllCategory() {
+		// TODO Auto-generated method stub
+		categoryrepository.deleteAll();
+	}
 }

@@ -49,4 +49,9 @@ public class CategoryController {
 	public CategoryModel getCategoryById(@PathVariable int id) {
 		return categoryservice.getCategoryById(id);
 	}
+	
+	@DeleteMapping
+	public void deleteAllCategory() {
+		categoryservice.deleteAllCategory();
+	}
 }

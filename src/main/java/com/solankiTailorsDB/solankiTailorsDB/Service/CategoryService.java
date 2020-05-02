@@ -10,4 +10,5 @@ public interface CategoryService {
 	CategoryModel updateCategory(CategoryModel category);
 	void deleteCategory(int id);
 	CategoryModel getCategoryById(int id);
+	void deleteAllCategory();
 }

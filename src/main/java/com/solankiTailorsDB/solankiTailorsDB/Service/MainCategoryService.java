@@ -8,4 +8,5 @@ public interface MainCategoryService {
 	MainCategoryModel addMainCategry(MainCategoryModel mainCategory);
 	List<MainCategoryModel> getAllMainCategory();
 	MainCategoryModel updateMainCategory(MainCategoryModel mainCategory);
+	void deleteMainCategory(int id);
 }

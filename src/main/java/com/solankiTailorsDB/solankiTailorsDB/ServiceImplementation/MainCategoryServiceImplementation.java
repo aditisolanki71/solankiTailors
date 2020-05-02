@@ -32,6 +32,12 @@ public class MainCategoryServiceImplementation implements MainCategoryService{
 		// TODO Auto-generated method stub
 		return maincategoryrepository.save(mainCategory);
 	}
+
+	@Override
+	public void deleteMainCategory(int id) {
+		// TODO Auto-generated method stub
+		maincategoryrepository.deleteById(id);
+	}
 	
 
 }

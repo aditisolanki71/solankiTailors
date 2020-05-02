@@ -46,4 +46,9 @@ public class MainCategoryController {
 	public MainCategoryModel getMainCategoryById(@PathVariable int id) {
 		return maincategoryservice.getMainCategoryById(id);
 	}
+	
+	@DeleteMapping
+	public void deleteAllMainCategory() {
+		maincategoryservice.deleteAllMainCategory();
+	}
 }

@@ -46,6 +46,12 @@ public class MainCategoryServiceImplementation implements MainCategoryService{
 		Optional<MainCategoryModel> g = maincategoryrepository.findById(id);
 		return g.get();
 	}
+
+	@Override
+	public void deleteAllMainCategory() {
+		// TODO Auto-generated method stub
+		maincategoryrepository.deleteAll();
+	}
 	
 
 }

@@ -10,4 +10,5 @@ public interface MainCategoryService {
 	MainCategoryModel updateMainCategory(MainCategoryModel mainCategory);
 	void deleteMainCategory(int id);
 	MainCategoryModel getMainCategoryById(int id);
+	void deleteAllMainCategory();
 }

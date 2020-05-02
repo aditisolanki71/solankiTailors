@@ -10,4 +10,5 @@ public interface AdminService {
 	AdminModel updateAdmin(AdminModel admin);
 	void deleteAdmin(int id);
 	AdminModel getAdminById(int id);
+	void deleteAllAdmin();
 }

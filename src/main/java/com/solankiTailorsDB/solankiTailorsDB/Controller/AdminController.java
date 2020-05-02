@@ -47,4 +47,8 @@ public class AdminController {
 		return adminservice.getAdminById(id);
 	}
 	
+	@DeleteMapping
+	public void deleteAllAdmin() {
+		adminservice.deleteAllAdmin();
+	}
 }

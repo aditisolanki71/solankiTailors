@@ -46,4 +46,10 @@ public class AdminServiceImplementation implements AdminService {
 		 return g.get();
 	}
 
+	@Override
+	public void deleteAllAdmin() {
+		// TODO Auto-generated method stub
+		adminrepository.deleteAll();
+	}
+
 }

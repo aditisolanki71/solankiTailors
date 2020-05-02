@@ -29,5 +29,8 @@ public class CategoryServiceImplementation implements CategoryService{
 		// TODO Auto-generated method stub
 		return categoryrepository.save(category);
 	}
-
+	@Override
+	public void deleteCategory(int id) {
+		categoryrepository.deleteById(id);
+	}
 }

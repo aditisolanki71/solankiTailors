@@ -6,7 +6,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -36,5 +38,10 @@ public class CategoryController {
 	@PutMapping
 	public CategoryModel updateCategory(@RequestBody CategoryModel category) {
 		return categoryservice.updateCategory(category);
+	}
+	
+	@DeleteMapping("/{id}")
+	public void deleteCategory(@PathVariable int id) {
+		categoryservice.deleteCategory(id);
 	}
 }

@@ -8,4 +8,5 @@ public interface CategoryService {
 	CategoryModel addCategory(CategoryModel category);
 	List<CategoryModel> getAllCategory();
 	CategoryModel updateCategory(CategoryModel category);
+	void deleteCategory(int id);
 }

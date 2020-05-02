@@ -26,6 +26,12 @@ public class MainCategoryServiceImplementation implements MainCategoryService{
 		// TODO Auto-generated method stub
 		return maincategoryrepository.findAll();
 	}
+
+	@Override
+	public MainCategoryModel updateMainCategory(MainCategoryModel mainCategory) {
+		// TODO Auto-generated method stub
+		return maincategoryrepository.save(mainCategory);
+	}
 	
 
 }

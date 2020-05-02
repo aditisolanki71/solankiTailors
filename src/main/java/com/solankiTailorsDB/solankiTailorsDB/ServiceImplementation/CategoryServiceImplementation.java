@@ -1,5 +1,21 @@
 package com.solankiTailorsDB.solankiTailorsDB.ServiceImplementation;
 
-public class CategoryServiceImplementation {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.solankiTailorsDB.solankiTailorsDB.Model.CategoryModel;
+import com.solankiTailorsDB.solankiTailorsDB.Repository.CategoryRepository;
+import com.solankiTailorsDB.solankiTailorsDB.Service.CategoryService;
+
+@Service
+public class CategoryServiceImplementation implements CategoryService{
+
+	@Autowired
+	CategoryRepository categoryrepository;
+	@Override
+	public CategoryModel addCategory(CategoryModel category) {
+		// TODO Auto-generated method stub
+		return categoryrepository.save(category);
+	}
 
 }

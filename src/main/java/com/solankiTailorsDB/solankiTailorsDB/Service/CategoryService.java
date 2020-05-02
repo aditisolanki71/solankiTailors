@@ -1,5 +1,7 @@
 package com.solankiTailorsDB.solankiTailorsDB.Service;
 
-public class CategoryService {
+import com.solankiTailorsDB.solankiTailorsDB.Model.CategoryModel;
 
+public interface CategoryService {
+	CategoryModel addCategory(CategoryModel category);
 }

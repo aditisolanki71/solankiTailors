@@ -1,6 +1,7 @@
 package com.solankiTailorsDB.solankiTailorsDB.ServiceImplementation;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,5 +33,11 @@ public class CategoryServiceImplementation implements CategoryService{
 	@Override
 	public void deleteCategory(int id) {
 		categoryrepository.deleteById(id);
+	}
+	@Override
+	public CategoryModel getCategoryById(int id) {
+		// TODO Auto-generated method stub
+		Optional<CategoryModel> g = categoryrepository.findById(id);
+		return g.get();
 	}
 }

@@ -24,5 +24,10 @@ public class CategoryServiceImplementation implements CategoryService{
 		// TODO Auto-generated method stub
 		return categoryrepository.findAll();
 	}
+	@Override
+	public CategoryModel updateCategory(CategoryModel category) {
+		// TODO Auto-generated method stub
+		return categoryrepository.save(category);
+	}
 
 }

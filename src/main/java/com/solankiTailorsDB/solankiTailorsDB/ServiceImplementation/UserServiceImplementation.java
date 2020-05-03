@@ -29,19 +29,19 @@ public class UserServiceImplementation implements UserService {
 	}
 
 	@Override
-	public UserModel updateItem(UserModel user) {
+	public UserModel updateUser(UserModel user) {
 		// TODO Auto-generated method stub
 		return userrepository.save(user);
 	}
 
 	@Override
-	public void deleteItem(int id) {
+	public void deleteUser(int id) {
 		// TODO Auto-generated method stub
 		userrepository.deleteById(id);
 	}
 
 	@Override
-	public UserModel getItemById(int id) {
+	public UserModel getUserById(int id) {
 		// TODO Auto-generated method stub
 		Optional<UserModel> g = userrepository.findById(id);
 		return g.get();

@@ -10,7 +10,7 @@ import com.solankiTailorsDB.solankiTailorsDB.Model.UserModel;
 public interface UserService {
 	UserModel addUser(UserModel user);
 	List<UserModel> getAllUser();
-	UserModel updateItem(UserModel user);
-	void deleteItem(int id);
-	UserModel getItemById(int id);
+	UserModel updateUser(UserModel user);
+	void deleteUser(int id);
+	UserModel getUserById(int id);
 }

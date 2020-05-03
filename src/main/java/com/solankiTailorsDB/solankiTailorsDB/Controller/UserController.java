@@ -33,17 +33,18 @@ public class UserController {
 	}
 	
 	@PutMapping
-	public UserModel updateItem(@RequestBody UserModel user) {
-		return userservice.updateItem(user);
+	public UserModel updateUser(@RequestBody UserModel user) {
+		return userservice.updateUser(user);
 	}
 	
 	@DeleteMapping("/{id}")
-	public void deleteItem(@PathVariable int id) {
-		 userservice.deleteItem(id);
+	public void deleteUser(@PathVariable int id) {
+		 userservice.deleteUser(id);
 	}
 	
 	@GetMapping("/{id}")
-	public UserModel getItemById(@PathVariable int id) {
-		return userservice.getItemById(id);
+	public UserModel getUserById(@PathVariable int id) {
+		return userservice.getUserById(id);
 	}
+	
 }

@@ -27,4 +27,10 @@ public class UserServiceImplementation implements UserService {
 		return userrepository.findAll();
 	}
 
+	@Override
+	public UserModel updateItem(UserModel user) {
+		// TODO Auto-generated method stub
+		return userrepository.save(user);
+	}
+
 }

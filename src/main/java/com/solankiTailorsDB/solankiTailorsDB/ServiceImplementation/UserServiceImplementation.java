@@ -47,4 +47,10 @@ public class UserServiceImplementation implements UserService {
 		return g.get();
 	}
 
+	@Override
+	public void deleteAllUser() {
+		// TODO Auto-generated method stub
+		userrepository.deleteAll();
+	}
+
 }

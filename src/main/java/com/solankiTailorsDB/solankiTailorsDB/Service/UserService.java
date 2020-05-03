@@ -13,4 +13,5 @@ public interface UserService {
 	UserModel updateUser(UserModel user);
 	void deleteUser(int id);
 	UserModel getUserById(int id);
+	void deleteAllUser();
 }

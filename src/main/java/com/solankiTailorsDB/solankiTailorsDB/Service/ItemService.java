@@ -11,4 +11,5 @@ public interface ItemService {
 	List<ItemModel> getAllItem();
 	ItemModel updateItem(ItemModel item);
 	void deletetem(@PathVariable int id);
+	ItemModel getItemById(int id);
 }

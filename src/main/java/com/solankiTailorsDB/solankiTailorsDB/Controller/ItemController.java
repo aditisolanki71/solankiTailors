@@ -41,4 +41,9 @@ public class ItemController {
 	public void deletetem(@PathVariable int id) {
 		 itemservice.deletetem(id);
 	}
+	
+	@GetMapping("/{id}")
+	public ItemModel getItemById(@PathVariable int id) {
+		return itemservice.getItemById(id);
+	}
 }

@@ -23,5 +23,10 @@ public class ItemServiceImplementation implements ItemService{
 		// TODO Auto-generated method stub
 		return itemrepository.findAll();
 	}
+	@Override
+	public ItemModel updateItem(ItemModel item) {
+		// TODO Auto-generated method stub
+		return itemrepository.save(item);
+	}
 
 }

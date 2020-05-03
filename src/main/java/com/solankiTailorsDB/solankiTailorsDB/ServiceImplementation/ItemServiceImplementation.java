@@ -1,5 +1,7 @@
 package com.solankiTailorsDB.solankiTailorsDB.ServiceImplementation;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,11 @@ public class ItemServiceImplementation implements ItemService{
 	public ItemModel additem(ItemModel item) {
 		// TODO Auto-generated method stub
 		return itemrepository.save(item);
+	}
+	@Override
+	public List<ItemModel> getAllItem() {
+		// TODO Auto-generated method stub
+		return itemrepository.findAll();
 	}
 
 }

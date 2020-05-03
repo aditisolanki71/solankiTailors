@@ -3,7 +3,9 @@ package com.solankiTailorsDB.solankiTailorsDB.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -33,5 +35,10 @@ public class ItemController {
 	@PutMapping
 	public ItemModel updateItem(@RequestBody ItemModel item) {
 		return itemservice.updateItem(item);
+	}
+	
+	@DeleteMapping("/{id}")
+	public void deletetem(@PathVariable int id) {
+		 itemservice.deletetem(id);
 	}
 }

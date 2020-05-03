@@ -28,5 +28,10 @@ public class ItemServiceImplementation implements ItemService{
 		// TODO Auto-generated method stub
 		return itemrepository.save(item);
 	}
+	@Override
+	public void deletetem(int id) {
+		// TODO Auto-generated method stub
+		itemrepository.deleteById(id);
+	}
 
 }

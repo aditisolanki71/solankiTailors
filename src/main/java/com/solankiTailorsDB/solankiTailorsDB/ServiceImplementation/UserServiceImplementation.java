@@ -33,4 +33,10 @@ public class UserServiceImplementation implements UserService {
 		return userrepository.save(user);
 	}
 
+	@Override
+	public void deleteItem(int id) {
+		// TODO Auto-generated method stub
+		userrepository.deleteById(id);
+	}
+
 }

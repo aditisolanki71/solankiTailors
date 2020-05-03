@@ -40,5 +40,10 @@ public class ItemServiceImplementation implements ItemService{
 		Optional<ItemModel> g = itemrepository.findById(id);
 		return g.get();
 	}
+	@Override
+	public void deleteAllItem() {
+		// TODO Auto-generated method stub
+		 itemrepository.deleteAll();
+	}
 
 }

@@ -12,4 +12,5 @@ public interface ItemService {
 	ItemModel updateItem(ItemModel item);
 	void deletetem(@PathVariable int id);
 	ItemModel getItemById(int id);
+	void deleteAllItem();
 }

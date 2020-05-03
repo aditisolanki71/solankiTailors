@@ -46,4 +46,9 @@ public class ItemController {
 	public ItemModel getItemById(@PathVariable int id) {
 		return itemservice.getItemById(id);
 	}
+	
+	@DeleteMapping
+	public void deleteAllItem() {
+		 itemservice.deleteAllItem();
+	}
 }

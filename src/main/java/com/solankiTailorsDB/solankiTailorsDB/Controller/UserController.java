@@ -41,4 +41,9 @@ public class UserController {
 	public void deleteItem(@PathVariable int id) {
 		 userservice.deleteItem(id);
 	}
+	
+	@GetMapping("/{id}")
+	public UserModel getItemById(@PathVariable int id) {
+		return userservice.getItemById(id);
+	}
 }

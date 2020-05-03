@@ -12,4 +12,5 @@ public interface UserService {
 	List<UserModel> getAllUser();
 	UserModel updateItem(UserModel user);
 	void deleteItem(int id);
+	UserModel getItemById(int id);
 }

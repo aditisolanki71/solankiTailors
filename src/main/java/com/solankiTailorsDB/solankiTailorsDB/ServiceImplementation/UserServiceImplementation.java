@@ -1,6 +1,7 @@
 package com.solankiTailorsDB.solankiTailorsDB.ServiceImplementation;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,6 +38,13 @@ public class UserServiceImplementation implements UserService {
 	public void deleteItem(int id) {
 		// TODO Auto-generated method stub
 		userrepository.deleteById(id);
+	}
+
+	@Override
+	public UserModel getItemById(int id) {
+		// TODO Auto-generated method stub
+		Optional<UserModel> g = userrepository.findById(id);
+		return g.get();
 	}
 
 }

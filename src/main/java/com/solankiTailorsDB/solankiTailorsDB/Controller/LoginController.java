@@ -12,14 +12,19 @@ import com.solankiTailorsDB.solankiTailorsDB.Model.UserModel;
 import com.solankiTailorsDB.solankiTailorsDB.Service.LoginService;
 
 @RestController
-@RequestMapping("login")
+@RequestMapping
 public class LoginController {
 	
 	@Autowired
 	LoginService loginservice;
 	
-	@PostMapping
+	@PostMapping("login")
 	public ResponseEntity login(@RequestBody LoginInput logininput) {
 		return loginservice.login(logininput);
+	}
+	
+	@PostMapping("register")
+	public ResponseEntity register(@RequestBody UserModel registerinput) {
+		return loginservice.register(registerinput);
 	}	
 }

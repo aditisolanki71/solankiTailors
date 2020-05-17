@@ -33,4 +33,17 @@ public class LoginServiceImplementation implements LoginService {
 		}
 	}
 
+	@Override
+	public ResponseEntity register(UserModel registerinput) {
+		// TODO Auto-generated method stub
+		UserModel user = userrepository.save(registerinput);
+		if(user == null) {
+			return new ResponseEntity<>("Registration Fail",HttpStatus.BAD_REQUEST);
+		}
+		else {
+			return new ResponseEntity<>("Successfully Registered",HttpStatus.OK);
+		}
+		
+	}
+
 }

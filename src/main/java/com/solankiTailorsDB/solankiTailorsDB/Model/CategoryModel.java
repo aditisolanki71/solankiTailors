@@ -3,6 +3,8 @@ package com.solankiTailorsDB.solankiTailorsDB.Model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 @Entity
 @Table ( name = "category")
@@ -13,6 +15,17 @@ public class CategoryModel {
 	String name;
 	String description;
 	String image;
+	@ManyToOne
+	@JoinColumn(name = "main_category_id")
+	MainCategoryModel mainCategory;
+	
+	
+	public MainCategoryModel getMainCategory() {
+		return mainCategory;
+	}
+	public void setMainCategory(MainCategoryModel mainCategory) {
+		this.mainCategory = mainCategory;
+	}
 	public int getId() {
 		return id;
 	}

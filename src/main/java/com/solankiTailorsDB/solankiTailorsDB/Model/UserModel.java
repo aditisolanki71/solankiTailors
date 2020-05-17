@@ -13,7 +13,7 @@ public class UserModel {
 	@GeneratedValue
 	int id;
 	String name;
-	String userName;
+	String username;
 	String password;
 	String email;
 	String address;
@@ -38,10 +38,10 @@ public class UserModel {
 		this.name = name;
 	}
 	public String getUserName() {
-		return userName;
+		return username;
 	}
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUserName(String username) {
+		this.username = username;
 	}
 	public String getPassword() {
 		return password;
@@ -69,7 +69,7 @@ public class UserModel {
 	}
 	@Override
 	public String toString() {
-		return "UserModel [id=" + id + ", name=" + name + ", userName=" + userName + ", password=" + password
+		return "UserModel [id=" + id + ", name=" + name + ", username=" + username + ", password=" + password
 				+ ", email=" + email + ", address=" + address + ", contactNo=" + contactNo + ", role=" + role
 				+ ", getRole()=" + getRole() + ", getId()=" + getId() + ", getName()=" + getName() + ", getUserName()="
 				+ getUserName() + ", getPassword()=" + getPassword() + ", getEmail()=" + getEmail() + ", getAddress()="

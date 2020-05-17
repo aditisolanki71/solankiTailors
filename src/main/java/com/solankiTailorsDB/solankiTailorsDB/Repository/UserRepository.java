@@ -7,5 +7,5 @@ import com.solankiTailorsDB.solankiTailorsDB.Model.UserModel;
 
 @Repository
 public interface UserRepository extends JpaRepository<UserModel,Integer> {
-
+	public UserModel findByUsername(String username);
 }

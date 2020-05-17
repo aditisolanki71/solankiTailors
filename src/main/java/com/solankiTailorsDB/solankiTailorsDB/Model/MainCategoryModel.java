@@ -24,6 +24,12 @@ public class MainCategoryModel {
 	public String getImage() {
 		return image;
 	}
+	public List<CategoryModel> getCategories() {
+		return categories;
+	}
+	public void setCategories(List<CategoryModel> categories) {
+		this.categories = categories;
+	}
 	public void setImage(String image) {
 		this.image = image;
 	}

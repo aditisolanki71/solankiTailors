@@ -1,10 +1,13 @@
 package com.solankiTailorsDB.solankiTailorsDB.Model;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 @Entity
 @Table ( name = "category")
@@ -19,12 +22,22 @@ public class CategoryModel {
 	@JoinColumn(name = "main_category_id")
 	MainCategoryModel mainCategory;
 	
+	@OneToMany(mappedBy = "category")
+	List<ItemModel> items;
 	
+	
+
 	public MainCategoryModel getMainCategory() {
 		return mainCategory;
 	}
 	public void setMainCategory(MainCategoryModel mainCategory) {
 		this.mainCategory = mainCategory;
+	}
+	public List<ItemModel> getItems() {
+		return items;
+	}
+	public void setItems(List<ItemModel> items) {
+		this.items = items;
 	}
 	public int getId() {
 		return id;

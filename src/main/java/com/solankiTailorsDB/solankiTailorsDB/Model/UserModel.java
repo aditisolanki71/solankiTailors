@@ -18,6 +18,13 @@ public class UserModel {
 	String email;
 	String address;
 	String contactNo;
+	String role;
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
 	public int getId() {
 		return id;
 	}
@@ -63,7 +70,12 @@ public class UserModel {
 	@Override
 	public String toString() {
 		return "UserModel [id=" + id + ", name=" + name + ", userName=" + userName + ", password=" + password
-				+ ", email=" + email + ", address=" + address + ", contactNo=" + contactNo + "]";
+				+ ", email=" + email + ", address=" + address + ", contactNo=" + contactNo + ", role=" + role
+				+ ", getRole()=" + getRole() + ", getId()=" + getId() + ", getName()=" + getName() + ", getUserName()="
+				+ getUserName() + ", getPassword()=" + getPassword() + ", getEmail()=" + getEmail() + ", getAddress()="
+				+ getAddress() + ", getContactNo()=" + getContactNo() + ", getClass()=" + getClass() + ", hashCode()="
+				+ hashCode() + ", toString()=" + super.toString() + "]";
 	}
+	
 	
 }

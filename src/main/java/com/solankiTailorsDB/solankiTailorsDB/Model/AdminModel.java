@@ -3,9 +3,11 @@ package com.solankiTailorsDB.solankiTailorsDB.Model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 //file-1
 @Entity
+@Table ( name = "admin")
 public class AdminModel {
 	
 	@Id

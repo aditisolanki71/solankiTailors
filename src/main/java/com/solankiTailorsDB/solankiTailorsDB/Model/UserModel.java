@@ -17,7 +17,7 @@ public class UserModel {
 	String password;
 	String email;
 	String address;
-	String contactNo;
+	String contactno;
 	String role;
 	public String getRole() {
 		return role;
@@ -62,15 +62,15 @@ public class UserModel {
 		this.address = address;
 	}
 	public String getContactNo() {
-		return contactNo;
+		return contactno;
 	}
 	public void setContactNo(String contactNo) {
-		this.contactNo = contactNo;
+		this.contactno = contactNo;
 	}
 	@Override
 	public String toString() {
 		return "UserModel [id=" + id + ", name=" + name + ", username=" + username + ", password=" + password
-				+ ", email=" + email + ", address=" + address + ", contactNo=" + contactNo + ", role=" + role
+				+ ", email=" + email + ", address=" + address + ", contactNo=" + contactno + ", role=" + role
 				+ ", getRole()=" + getRole() + ", getId()=" + getId() + ", getName()=" + getName() + ", getUserName()="
 				+ getUserName() + ", getPassword()=" + getPassword() + ", getEmail()=" + getEmail() + ", getAddress()="
 				+ getAddress() + ", getContactNo()=" + getContactNo() + ", getClass()=" + getClass() + ", hashCode()="

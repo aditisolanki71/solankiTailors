@@ -1,5 +1,7 @@
 package com.solankiTailorsDB.solankiTailorsDB.Service;
 
-public class TestimonialService {
+import com.solankiTailorsDB.solankiTailorsDB.Model.TestimonialModel;
 
+public interface TestimonialService {
+	TestimonialModel addTestimonial(TestimonialModel testimonial);
 }

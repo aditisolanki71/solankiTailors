@@ -40,4 +40,9 @@ public class TestimonialController {
 	public void deleteItem(@PathVariable Integer id) {
 		 testimonialservice.deleteItem(id);
 	}
+	
+	@GetMapping("/{id}")
+	public TestimonialModel getTestimonialById(@PathVariable Integer id) {
+		return testimonialservice.getTestimonialById(id);
+	}
 }

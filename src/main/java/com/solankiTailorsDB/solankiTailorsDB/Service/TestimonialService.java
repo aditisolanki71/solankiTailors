@@ -12,4 +12,5 @@ public interface TestimonialService {
 	List<TestimonialModel> getAllTestimonial();
 	TestimonialModel updateTestimonial(TestimonialModel testimonial);
 	void deleteItem(Integer id);
+	TestimonialModel getTestimonialById(Integer id);
 }

@@ -1,6 +1,7 @@
 package com.solankiTailorsDB.solankiTailorsDB.ServiceImplementation;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,6 +38,13 @@ public class TestimonialServiceImplementation implements TestimonialService {
 	public void deleteItem(Integer id) {
 		// TODO Auto-generated method stub
 		testimonialrepository.deleteById(id);
+	}
+
+	@Override
+	public TestimonialModel getTestimonialById(Integer id) {
+		// TODO Auto-generated method stub
+	Optional<TestimonialModel> g= testimonialrepository.findById(id);
+	return g.get();
 	}
 
 }

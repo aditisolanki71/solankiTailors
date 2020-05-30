@@ -27,4 +27,10 @@ public class TestimonialServiceImplementation implements TestimonialService {
 		return testimonialrepository.findAll();
 	}
 
+	@Override
+	public TestimonialModel updateTestimonial(TestimonialModel testimonial) {
+		// TODO Auto-generated method stub
+		return testimonialrepository.save(testimonial);
+	}
+
 }

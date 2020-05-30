@@ -33,4 +33,10 @@ public class TestimonialServiceImplementation implements TestimonialService {
 		return testimonialrepository.save(testimonial);
 	}
 
+	@Override
+	public void deleteItem(Integer id) {
+		// TODO Auto-generated method stub
+		testimonialrepository.deleteById(id);
+	}
+
 }

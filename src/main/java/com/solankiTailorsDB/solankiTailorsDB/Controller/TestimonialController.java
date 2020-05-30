@@ -1,6 +1,9 @@
 package com.solankiTailorsDB.solankiTailorsDB.Controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +21,11 @@ public class TestimonialController {
 	@PostMapping
 	public TestimonialModel addTestimonial(@RequestBody TestimonialModel testimonial) {
 		return testimonialservice.addTestimonial(testimonial);
-		
+	}
+	
+	@GetMapping
+	public List<TestimonialModel> getAllTestimonial() {
+		return testimonialservice.getAllTestimonial();
 	}
 	
 }

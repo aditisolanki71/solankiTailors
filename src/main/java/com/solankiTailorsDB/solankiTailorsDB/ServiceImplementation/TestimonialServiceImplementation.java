@@ -1,5 +1,7 @@
 package com.solankiTailorsDB.solankiTailorsDB.ServiceImplementation;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,12 @@ public class TestimonialServiceImplementation implements TestimonialService {
 	public TestimonialModel addTestimonial(TestimonialModel testimonial) {
 		// TODO Auto-generated method stub
 		return testimonialrepository.save(testimonial);
+	}
+
+	@Override
+	public List<TestimonialModel> getAllTestimonial() {
+		// TODO Auto-generated method stub
+		return testimonialrepository.findAll();
 	}
 
 }

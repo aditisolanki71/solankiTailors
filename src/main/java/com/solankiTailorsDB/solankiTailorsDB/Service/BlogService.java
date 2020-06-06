@@ -12,4 +12,5 @@ public interface BlogService {
 	List<BlogModel> getBlog();
 	BlogModel updateById(BlogModel blog);
 	void deleteBlogById(int id);
+	BlogModel getBlogById(int id);
 }

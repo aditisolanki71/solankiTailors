@@ -41,4 +41,9 @@ public class BlogController {
 	public void deleteBlogById(@PathVariable int id) {
 		blogService.deleteBlogById(id);
 	}
+	
+	@GetMapping("/{id}")
+	public BlogModel getBlogById(@PathVariable int id) {
+		return blogService.getBlogById(id);
+	}
 }

@@ -1,6 +1,7 @@
 package com.solankiTailorsDB.solankiTailorsDB.ServiceImplementation;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,6 +38,13 @@ public class BlogServiceImplementation implements BlogService{
 	public void deleteBlogById(int id) {
 		// TODO Auto-generated method stub
 		blogRepository.deleteById(id);
+	}
+
+	@Override
+	public BlogModel getBlogById(int id) {
+		// TODO Auto-generated method stub
+		Optional<BlogModel> g =blogRepository.findById(id);
+		return g.get();
 	}
 
 }

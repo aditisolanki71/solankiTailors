@@ -33,4 +33,10 @@ public class FAQServiceImplementation implements FAQService{
 		return faqRepository.save(faq);
 	}
 
+	@Override
+	public void deleteById(int id) {
+		// TODO Auto-generated method stub
+		faqRepository.deleteById(id);
+	}
+
 }

@@ -35,4 +35,10 @@ public class FileServiceImplementation implements FileService{
 		return ResponseEntity.ok("Success");
 	}
 
+	@Override
+	public FileModel downloadFile(String filename) {
+		// TODO Auto-generated method stub
+		return fileRepository.findByFilename(filename);
+	}
+
 }

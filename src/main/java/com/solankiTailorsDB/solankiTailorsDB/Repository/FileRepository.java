@@ -10,5 +10,5 @@ import com.solankiTailorsDB.solankiTailorsDB.Model.FileModel;
 @Repository
 @Transactional
 public interface FileRepository extends JpaRepository<FileModel,Long> {
-
+	FileModel findByFilename(String filename);
 }

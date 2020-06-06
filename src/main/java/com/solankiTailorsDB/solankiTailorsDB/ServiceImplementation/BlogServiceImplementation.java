@@ -33,4 +33,10 @@ public class BlogServiceImplementation implements BlogService{
 		return blogRepository.save(blog);
 	}
 
+	@Override
+	public void deleteBlogById(int id) {
+		// TODO Auto-generated method stub
+		blogRepository.deleteById(id);
+	}
+
 }

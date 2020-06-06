@@ -1,5 +1,7 @@
 package com.solankiTailorsDB.solankiTailorsDB.ServiceImplementation;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,12 @@ public class BlogServiceImplementation implements BlogService{
 	public BlogModel addBlog(BlogModel blog) {
 		// TODO Auto-generated method stub
 		return blogRepository.save(blog);
+	}
+
+	@Override
+	public List<BlogModel> getBlog() {
+		// TODO Auto-generated method stub
+		return blogRepository.findAll();
 	}
 
 }

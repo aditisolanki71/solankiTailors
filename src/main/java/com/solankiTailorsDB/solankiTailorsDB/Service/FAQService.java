@@ -12,4 +12,5 @@ public interface FAQService {
 	List<FAQModel> getAllFAQ();
 	FAQModel updateById(FAQModel faq);
 	void deleteById(int id);
+	FAQModel getFAQById(int id);
 }

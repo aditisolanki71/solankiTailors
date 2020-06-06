@@ -1,6 +1,7 @@
 package com.solankiTailorsDB.solankiTailorsDB.ServiceImplementation;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,6 +38,13 @@ public class FAQServiceImplementation implements FAQService{
 	public void deleteById(int id) {
 		// TODO Auto-generated method stub
 		faqRepository.deleteById(id);
+	}
+
+	@Override
+	public FAQModel getFAQById(int id) {
+		// TODO Auto-generated method stub
+		Optional<FAQModel> g = faqRepository.findById(id);
+		return g.get();
 	}
 
 }

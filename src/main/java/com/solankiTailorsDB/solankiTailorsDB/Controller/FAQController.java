@@ -41,4 +41,9 @@ public class FAQController {
 	public void deleteById(@PathVariable int id) {
 		faqService.deleteById(id);
 	}
+	
+	@GetMapping("/{id}")
+	public FAQModel getFAQById(@PathVariable int id) {
+		return faqService.getFAQById(id);
+	}
 }

@@ -1,5 +1,7 @@
 package com.solankiTailorsDB.solankiTailorsDB.ServiceImplementation;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,12 @@ public class FAQServiceImplementation implements FAQService{
 	public FAQModel addFAQ(FAQModel faq) {
 		// TODO Auto-generated method stub
 		return faqRepository.save(faq);
+	}
+
+	@Override
+	public List<FAQModel> getAllFAQ() {
+		// TODO Auto-generated method stub
+		return faqRepository.findAll();
 	}
 
 }

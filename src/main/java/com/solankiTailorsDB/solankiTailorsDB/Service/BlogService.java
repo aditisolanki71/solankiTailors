@@ -9,4 +9,5 @@ import com.solankiTailorsDB.solankiTailorsDB.Model.BlogModel;
 public interface BlogService {
 	BlogModel addBlog(@RequestBody BlogModel blog);
 	List<BlogModel> getBlog();
+	BlogModel updateById(BlogModel blog);
 }

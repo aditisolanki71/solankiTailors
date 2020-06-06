@@ -27,4 +27,10 @@ public class BlogServiceImplementation implements BlogService{
 		return blogRepository.findAll();
 	}
 
+	@Override
+	public BlogModel updateById(BlogModel blog) {
+		// TODO Auto-generated method stub
+		return blogRepository.save(blog);
+	}
+
 }

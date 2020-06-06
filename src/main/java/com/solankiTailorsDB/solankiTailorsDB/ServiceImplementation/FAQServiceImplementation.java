@@ -27,4 +27,10 @@ public class FAQServiceImplementation implements FAQService{
 		return faqRepository.findAll();
 	}
 
+	@Override
+	public FAQModel updateById(FAQModel faq) {
+		// TODO Auto-generated method stub
+		return faqRepository.save(faq);
+	}
+
 }

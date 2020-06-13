@@ -5,6 +5,6 @@ import org.springframework.web.multipart.MultipartFile;
 import com.solankiTailorsDB.solankiTailorsDB.Model.FileModel;
 
 public interface FileService {
-	ResponseEntity uploadFile(MultipartFile file1);
+	ResponseEntity uploadFile(MultipartFile file1, String fileName);
 	FileModel downloadFile(String filename);
 }

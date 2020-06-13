@@ -18,7 +18,7 @@ public class FileServiceImplementation implements FileService{
 	FileRepository fileRepository;
 	
 	@Override
-	public ResponseEntity uploadFile(MultipartFile file1) {
+	public ResponseEntity uploadFile(MultipartFile file1, String fileName) {
 		// TODO Auto-generated method stub
 		//demo/aditi/img1
 		//file=content
@@ -26,7 +26,7 @@ public class FileServiceImplementation implements FileService{
 		FileModel file = new FileModel();	
 		try {
 			file.setFile(file1.getBytes());
-			file.setFilename(file1.getOriginalFilename());
+			file.setFilename(fileName);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

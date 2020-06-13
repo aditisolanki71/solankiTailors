@@ -1,5 +1,7 @@
 package com.solankiTailorsDB.solankiTailorsDB.Controller;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -25,7 +27,11 @@ public class FileController {
 	
 	@PostMapping("/upload")
 	public ResponseEntity uploadFile(@RequestParam("file") MultipartFile file1) {
-		return fileservice.uploadFile(file1);
+		
+		Date d = new Date();
+		String fileName = file1.getOriginalFilename() + "_" + d.getTime(); 
+		
+		return fileservice.uploadFile(file1, fileName);
 		
 	}
 	

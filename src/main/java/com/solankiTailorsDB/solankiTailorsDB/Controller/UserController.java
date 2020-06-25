@@ -32,9 +32,9 @@ public class UserController {
 		return userservice.getAllUser();
 	}
 	
-	@PutMapping
-	public UserModel updateUser(@RequestBody UserModel user) {
-		return userservice.updateUser(user);
+	@PutMapping("/{id}")
+	public UserModel updateUser(@PathVariable int id,@RequestBody UserModel user) {
+		return userservice.updateUser(id,user);
 	}
 	
 	@DeleteMapping("/{id}")

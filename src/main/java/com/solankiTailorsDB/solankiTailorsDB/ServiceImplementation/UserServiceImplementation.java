@@ -29,9 +29,17 @@ public class UserServiceImplementation implements UserService {
 	}
 
 	@Override
-	public UserModel updateUser(UserModel user) {
+	public UserModel updateUser(int id,UserModel user) {
 		// TODO Auto-generated method stub
-		return userrepository.save(user);
+		user.setId(id);
+		Optional<UserModel> oldUser = userrepository.findById(id);
+		UserModel temp = oldUser.get();
+		temp.setName(user.getName() == null ? temp.getName() : user.getName());
+		temp.setAddress(user.getAddress() == null ? temp.getAddress() : user.getAddress());
+		temp.setContactNo(user.getContactNo() == null ? temp.getContactNo() : user.getContactNo());
+		temp.setEmail(user.getEmail() == null ? temp.getEmail() : user.getEmail());
+		temp.setUserName(user.getUserName() == null ? temp.getUserName() : user.getUserName());
+		return userrepository.save(temp);
 	}
 
 	@Override

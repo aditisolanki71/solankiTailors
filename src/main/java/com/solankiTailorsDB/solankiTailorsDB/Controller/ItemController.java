@@ -32,9 +32,9 @@ public class ItemController {
 		return itemservice.getAllItem();
 	}
 	
-	@PutMapping
-	public ItemModel updateItem(@RequestBody ItemModel item) {
-		return itemservice.updateItem(item);
+	@PutMapping("/{id}")
+	public ItemModel updateItem(@PathVariable int id,@RequestBody ItemModel item) {
+		return itemservice.updateItem(id,item);
 	}
 	
 	@DeleteMapping("/{id}")

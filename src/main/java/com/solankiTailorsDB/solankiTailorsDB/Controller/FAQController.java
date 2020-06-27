@@ -32,9 +32,9 @@ public class FAQController {
 		return faqService.getAllFAQ();
 	}
 	
-	@PutMapping
-	public FAQModel updateById(@RequestBody FAQModel faq) {
-		return faqService.updateById(faq);
+	@PutMapping("/{id}")
+	public FAQModel updateById(@PathVariable int id,@RequestBody FAQModel faq) {
+		return faqService.updateById(id,faq);
 	}
 	
 	@DeleteMapping("/{id}")

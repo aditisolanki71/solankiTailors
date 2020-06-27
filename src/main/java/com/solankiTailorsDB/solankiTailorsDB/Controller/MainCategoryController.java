@@ -51,9 +51,9 @@ public class MainCategoryController {
 		return maincategoryservice.getAllMainCategory();
 	}
 	
-	@PutMapping
-	public MainCategoryModel updateMainCategory(@RequestBody MainCategoryModel mainCategory) {
-		return maincategoryservice.updateMainCategory(mainCategory);
+	@PutMapping("/{id}")
+	public MainCategoryModel updateMainCategory(@PathVariable int id,@RequestBody MainCategoryModel mainCategory) {
+		return maincategoryservice.updateMainCategory(id,mainCategory);
 	}
 	
 	@DeleteMapping("/{id}")

@@ -10,7 +10,7 @@ import com.solankiTailorsDB.solankiTailorsDB.Model.TestimonialModel;
 public interface TestimonialService {
 	TestimonialModel addTestimonial(TestimonialModel testimonial);
 	List<TestimonialModel> getAllTestimonial();
-	TestimonialModel updateTestimonial(TestimonialModel testimonial);
+	TestimonialModel updateTestimonial(int id,TestimonialModel testimonial);
 	void deleteItem(Integer id);
 	TestimonialModel getTestimonialById(Integer id);
 }

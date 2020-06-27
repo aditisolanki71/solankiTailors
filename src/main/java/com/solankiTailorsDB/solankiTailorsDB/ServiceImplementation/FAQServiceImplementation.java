@@ -29,9 +29,15 @@ public class FAQServiceImplementation implements FAQService{
 	}
 
 	@Override
-	public FAQModel updateById(FAQModel faq) {
+	public FAQModel updateById(int id,FAQModel faq) {
 		// TODO Auto-generated method stub
-		return faqRepository.save(faq);
+		faq.setId(id);
+		Optional<FAQModel> oldFaq = faqRepository.findById(id);
+		FAQModel temp = oldFaq.get();
+		temp.setDate(faq.getDate() == null ? temp.getDate() : faq.getDate());
+		temp.setAnswer(faq.getAnswer() == null ? temp.getAnswer() : faq.getAnswer());
+		temp.setQuestion(faq.getAnswer() == null ? temp.getQuestion() : faq.getQuestion());
+		return faqRepository.save(temp);
 	}
 
 	@Override

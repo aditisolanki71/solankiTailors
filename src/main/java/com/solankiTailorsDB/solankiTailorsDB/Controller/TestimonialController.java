@@ -31,9 +31,9 @@ public class TestimonialController {
 		return testimonialservice.getAllTestimonial();
 	}
 	
-	@PutMapping
-	public TestimonialModel updateTestimonial(@RequestBody TestimonialModel testimonial) {
-		return testimonialservice.updateTestimonial(testimonial);
+	@PutMapping("/{id}")
+	public TestimonialModel updateTestimonial(@PathVariable Integer id,@RequestBody TestimonialModel testimonial) {
+		return testimonialservice.updateTestimonial(id,testimonial);
 	}
 	
 	@DeleteMapping("/{id}")

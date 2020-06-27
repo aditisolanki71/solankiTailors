@@ -26,9 +26,16 @@ public class CategoryServiceImplementation implements CategoryService{
 		return categoryrepository.findAll();
 	}
 	@Override
-	public CategoryModel updateCategory(CategoryModel category) {
+	public CategoryModel updateCategory(int id,CategoryModel category) {
 		// TODO Auto-generated method stub
-		return categoryrepository.save(category);
+		Optional<CategoryModel> oldCategory = categoryrepository.findById(id);
+		CategoryModel temp = oldCategory.get();
+		temp.setDescription(category.getDescription() == null ? temp.getDescription() : category.getDescription());
+		temp.setImage(category.getImage() == null ? temp.getImage() : category.getImage());
+		temp.setItems(category.getItems() == null ? temp.getItems() : category.getItems());
+		temp.setMainCategory(category.getMainCategory() == null ? temp.getMainCategory() : category.getMainCategory());
+		temp.setName(category.getName() == null ? temp.getName() : category.getName());
+		return categoryrepository.save(temp);
 	}
 	@Override
 	public void deleteCategory(int id) {

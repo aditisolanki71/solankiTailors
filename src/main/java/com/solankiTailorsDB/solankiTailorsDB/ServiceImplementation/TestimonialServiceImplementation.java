@@ -29,9 +29,15 @@ public class TestimonialServiceImplementation implements TestimonialService {
 	}
 
 	@Override
-	public TestimonialModel updateTestimonial(TestimonialModel testimonial) {
+	public TestimonialModel updateTestimonial(int id,TestimonialModel testimonial) {
 		// TODO Auto-generated method stub
-		return testimonialrepository.save(testimonial);
+		Optional<TestimonialModel> oldTestimonial = testimonialrepository.findById(id);
+		TestimonialModel temp = oldTestimonial.get();
+		temp.setDate(testimonial.getDate() == null ? temp.getDate() : testimonial.getDate());
+		temp.setDescription(testimonial.getDescription() == null ? temp.getDescription() : testimonial.getDescription());;
+		temp.setImage(testimonial.getImage() == null ? temp.getImage() : testimonial.getImage());
+		temp.setName(testimonial.getName() == null ? temp.getName() : testimonial.getName());
+		return testimonialrepository.save(temp);
 	}
 
 	@Override

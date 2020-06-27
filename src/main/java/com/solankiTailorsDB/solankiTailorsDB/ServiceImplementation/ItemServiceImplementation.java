@@ -25,9 +25,18 @@ public class ItemServiceImplementation implements ItemService{
 		return itemrepository.findAll();
 	}
 	@Override
-	public ItemModel updateItem(ItemModel item) {
+	public ItemModel updateItem(int id,ItemModel item) {
 		// TODO Auto-generated method stub
-		return itemrepository.save(item);
+		Optional<ItemModel> oldItem = itemrepository.findById(id);
+		ItemModel temp = oldItem.get();
+		temp.setDescription(item.getDescription() == null ? temp.getDescription() : item.getDescription());
+		temp.setImage(item.getImage() == null ? temp.getImage() : item.getImage());
+		temp.setLikes(item.getLikes() == 0 ? temp.getLikes() : item.getLikes());
+		temp.setName(item.getName() == null ? temp.getName() : item.getName());
+		temp.setPrice(item.getPrice() == 0 ? temp.getPrice() : item.getPrice());
+		item.setQuantity(item.getQuantity() == 0 ? temp.getQuantity() : item.getQuantity());
+		item.setComments(item.getComments() == null ? temp.getComments() : item.getComments());
+		return itemrepository.save(temp);
 	}
 	@Override
 	public void deletetem(int id) {

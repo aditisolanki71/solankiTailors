@@ -29,9 +29,14 @@ public class MainCategoryServiceImplementation implements MainCategoryService{
 	}
 
 	@Override
-	public MainCategoryModel updateMainCategory(MainCategoryModel mainCategory) {
+	public MainCategoryModel updateMainCategory(int id,MainCategoryModel mainCategory) {
 		// TODO Auto-generated method stub
-		return maincategoryrepository.save(mainCategory);
+		Optional<MainCategoryModel> oldMainCategory = maincategoryrepository.findById(id);
+		MainCategoryModel temp = oldMainCategory.get();
+		temp.setCategories(mainCategory.getCategories() == null ? temp.getCategories() : mainCategory.getCategories());
+		temp.setImage(mainCategory.getImage() == null ? temp.getImage() : mainCategory.getImage());
+		temp.setName(mainCategory.getName() == null ? temp.getName() : mainCategory.getName());
+		return maincategoryrepository.save(temp);
 	}
 
 	@Override

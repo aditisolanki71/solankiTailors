@@ -31,11 +31,6 @@ public class BlogController {
 	@Autowired
 	FileService fileService;
 	
-//	@PostMapping
-//	public BlogModel addBlog(@RequestBody BlogModel blog) {
-//		return blogService.addBlog(blog);
-//	}
-	
 	@PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
 	public BlogModel addBlog(@RequestPart("BlogModel") BlogModel blog,@RequestPart("file") MultipartFile file1)  {
 		Date d = new Date();
@@ -55,9 +50,9 @@ public class BlogController {
 		return blogService.getBlog();
 	}
 	
-	@PutMapping
-	public BlogModel updateById(@RequestBody BlogModel blog) {
-		return blogService.updateById(blog);
+	@PutMapping("/{id}")
+	public BlogModel updateById(@PathVariable int id,@RequestBody BlogModel blog) {
+		return blogService.updateById(id,blog);
 	}
 	
 	@DeleteMapping("/{id}")

@@ -10,7 +10,7 @@ import com.solankiTailorsDB.solankiTailorsDB.Model.BlogModel;
 public interface BlogService {
 	BlogModel addBlog(BlogModel blog);
 	List<BlogModel> getBlog();
-	BlogModel updateById(BlogModel blog);
+	BlogModel updateById(int id,BlogModel blog);
 	void deleteBlogById(int id);
 	BlogModel getBlogById(int id);
 }

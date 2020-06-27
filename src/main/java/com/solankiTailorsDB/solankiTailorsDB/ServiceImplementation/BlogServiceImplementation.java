@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.solankiTailorsDB.solankiTailorsDB.Model.BlogModel;
+import com.solankiTailorsDB.solankiTailorsDB.Model.UserModel;
 import com.solankiTailorsDB.solankiTailorsDB.Repository.BlogRepository;
 import com.solankiTailorsDB.solankiTailorsDB.Service.BlogService;
 
@@ -29,9 +30,18 @@ public class BlogServiceImplementation implements BlogService{
 	}
 
 	@Override
-	public BlogModel updateById(BlogModel blog) {
+	public BlogModel updateById(int id,BlogModel blog) {
 		// TODO Auto-generated method stub
-		return blogRepository.save(blog);
+		blog.setId(id);
+		Optional<BlogModel> oldBlog = blogRepository.findById(id);
+		BlogModel temp = oldBlog.get();
+		temp.setDescription(blog.getDescription() == null ? temp.getDescription() : blog.getDescription());
+		temp.setComments(blog.getComments() == null ? temp.getComments() : blog.getComments());
+		temp.setDate(blog.getDate() == null ? temp.getDate() : blog.getDate());
+		temp.setImage(blog.getImage() == null ? temp.getImage() : blog.getImage());
+		temp.setLikes(blog.getLikes() == 0 ? temp.getLikes() : blog.getLikes());		
+		temp.setName(blog.getName() == null ? temp.getName() : blog.getName());
+		return blogRepository.save(temp);
 	}
 
 	@Override
